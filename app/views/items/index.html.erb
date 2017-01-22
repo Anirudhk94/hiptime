@@ -1,6 +1,12 @@
-<% @item.each do |item| %>
-	<h3><%= link_to item.title, item_path(item.id) %></h3>
-	<p><%= item.description %></p>
-	<p><%= item.created_at %></p>
+<% if user_signed_in? %>
+	<% @item.each do |item| %>
+		<h3><%= link_to item.title, item_path(item.id) %></h3>
+		<p><%= item.description %></p>
+		<p><%= item.created_at %></p>
+	<% end %>
+
+<% else %>
+	<%= render 'welcome_page'%>
 <% end %>
+
 
