@@ -1,1 +1,7 @@
-<h1>Hello</h1>
+<% @item.each do |item| %>
+	<h3><%= link_to item.title, item_path(item.id) %></h3>
+	<p><%= item.description %></p>
+	<p><%= item.created_at %></p>
+<% end %>
+
+<%= link_to "Add Item", new_item_path %>
