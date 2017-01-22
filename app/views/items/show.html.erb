@@ -5,7 +5,9 @@
 			<h2><%= @item.title%></h2>
 			<p><%= @item.description %></p>
 			<p><%= @item.created_at %></p>
-			<%= link_to "Back", root_path%>
+			<div class="col-md-4 col-md-offset-5">
+				<%= link_to "Back", root_path%>
+			</div>		
 		</div>
 	</div>
 </div>
